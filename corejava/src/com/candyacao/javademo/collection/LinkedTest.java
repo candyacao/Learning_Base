@@ -3,7 +3,7 @@ package com.candyacao.javademo.collection;
 public class LinkedTest {
 	public static void main(String[] args) {
 
-		MyLinked myLinkedList = new MyLinked();
+		MyLinkedList myLinkedList = new MyLinkedList();
 		myLinkedList.addFirst("java");
 		System.out.println(myLinkedList.toString());
 		myLinkedList.addFirst("android");

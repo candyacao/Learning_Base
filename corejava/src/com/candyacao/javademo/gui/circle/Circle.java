@@ -1,6 +1,6 @@
 package com.candyacao.javademo.gui.circle;
 /**
- * Êı¾İ
+ * æ•°æ®
  * @author CLY
  *
  */

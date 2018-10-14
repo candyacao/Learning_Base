@@ -3,43 +3,76 @@ package com.candyacao.javademo.gui.circle;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.geom.Ellipse2D;
 
 /**
- * ¶Ô»­±ÊµÄ³£ÓÃ²Ù×÷µÄ·â×°
+ * ç”»ç¬”çš„å·¥å…·ç±»
+ * 
  * @author CLY
  *
  */
 public class GraphicsHelper {
-	
+
 	private GraphicsHelper() {
-		
 	}
-	public static void setColor(Graphics2D g2d,Color color) {
+
+	/**
+	 * è®¾ç½®ç”»ç¬”çš„é¢œè‰²
+	 * 
+	 * @param g2d
+	 * @param color
+	 */
+	public static void setColor(Graphics2D g2d, Color color) {
 		g2d.setColor(color);
 	}
+
 	/**
-	 * »­±ÊµÄ´Ö¶È
+	 * è®¾ç½®ç”»ç¬”çš„ç²—åº¦
+	 * 
 	 * @param g2d
 	 * @param width
 	 */
-	public static void setStrokeWidth(Graphics2D g2d,float width) {
-		g2d.setStroke(new BasicStroke(width));
+	public static void setStrokeWidth(Graphics2D g2d, float width) {
+		BasicStroke bs = new BasicStroke(width);
+		g2d.setStroke(bs);
 	}
+
 	/**
-	 * »­¿ÕĞÄÔ²
-	 * @param g2d »­±Ê
-	 * @param x   Ô²ĞÄµÄºá×ø±ê
-	 * @param y   Ô²ĞÄµÄ×İ×ø±ê
-	 * @param r   °ë¾¶
+	 * ç”»ä¸€ä¸ªç©ºå¿ƒçš„å›­
+	 * 
+	 * @param g2d ç”»ç¬”
+	 * @param x   åœ†å¿ƒçš„æ¨ªåæ ‡
+	 * @param y   åœ†å¿ƒçš„çºµåæ ‡
+	 * @param r   åœ†çš„åŠå¾„
 	 */
 	public static void strokeCircle(Graphics2D g2d, int x, int y, int r) {
-		Ellipse2D ellipse2d = new Ellipse2D.Float(x-r, y-r, 2*r, 2*r);
-		g2d.draw(ellipse2d);
+
+		Ellipse2D e2d = new Ellipse2D.Float(x - r, y - r, 2 * r, 2 * r);
+		g2d.draw(e2d);
+
+	}
+
+	public static void fillCircle(Graphics2D g2d, int x, int y, int r) {
+
+		Ellipse2D e2d = new Ellipse2D.Float(x - r, y - r, 2 * r, 2 * r);
+		g2d.fill(e2d);
+
+	}
+
+	public static void openAA(Graphics2D g2d) {
+		RenderingHints hints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		g2d.addRenderingHints(hints);
+
 	}
 	
-	public static void fillCircle(Graphics2D g2d, int x, int y, int r) {
-		Ellipse2D ellipse2d = new Ellipse2D.Float(x-r, y-r, 2*r, 2*r);
-		g2d.fill(ellipse2d);
+	public static void sleep(long time) {
+		try {
+			Thread.sleep(time);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
+
 }

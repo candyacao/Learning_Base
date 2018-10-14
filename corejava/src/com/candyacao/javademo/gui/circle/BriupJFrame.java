@@ -1,5 +1,4 @@
 package com.candyacao.javademo.gui.circle;
-
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -18,7 +17,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- * ×Ô¶¨ÒåµÄJFrameÀà
+ * è‡ªå®šä¹‰çš„JFrameç±»
  * @author CLY
  *
  */
@@ -40,22 +39,22 @@ public class BriupJFrame extends JFrame{
 		this.canvasWidth = canvasWidth;
 		this.canvasHeight= canvasHeight;
 		
-		/*¸ø»­°åJFrameÉèÖÃ¿í¸ß£¬µ«ÊÇÓÉÓÚMenuBarÒ²Õ¼¾İÁË¿Õ¼ä£¬
-		 * Êµ¼ÊÄÜÓÃµÄÃ»ÓĞÄÇÃ´´ó£¬ËùÒÔÓ¦¸Ã¸ø»­²¼ÉèÖÃ
+		/*ç»™ç”»æ¿JFrameè®¾ç½®å®½é«˜ï¼Œä½†æ˜¯ç”±äºMenuBarä¹Ÿå æ®äº†ç©ºé—´ï¼Œ
+		 * å®é™…èƒ½ç”¨çš„æ²¡æœ‰é‚£ä¹ˆå¤§ï¼Œæ‰€ä»¥åº”è¯¥ç»™ç”»å¸ƒè®¾ç½®
 		 */
 		//setSize(new Dimension(canvasWidth, canvasHeight));
 		BriupCanvas briupCanvas = new BriupCanvas(true);
 		briupCanvas.setPreferredSize(new Dimension(canvasWidth, canvasHeight));
-		//½«»­²¼Ìùµ½»­°åÉÏ
+		//å°†ç”»å¸ƒè´´åˆ°ç”»æ¿ä¸Š
 		setContentPane(briupCanvas);
-		//µ÷Õû´°¿ÚµÄ´óĞ¡£¬ÒÔÊÊÓ¦panelÉèÖÃµÄ´óĞ¡
+		//è°ƒæ•´çª—å£çš„å¤§å°ï¼Œä»¥é€‚åº”panelè®¾ç½®çš„å¤§å°
 		pack();
 		
-		//´°¿ÚµÄ´óĞ¡²»ÄÜËæÒâ¸Ä±ä
+		//çª—å£çš„å¤§å°ä¸èƒ½éšæ„æ”¹å˜
 		setResizable(false);
-		//ÉèÖÃ´°¿ÚµÄ¹Ø±ÕÄ£Ê½£¬¼´ÔÙ¹Ø±Õ´°¿ÚµÄÊ±ºòÍË³ö³ÌĞò
+		//è®¾ç½®çª—å£çš„å…³é—­æ¨¡å¼ï¼Œå³å†å…³é—­çª—å£çš„æ—¶å€™é€€å‡ºç¨‹åº
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		//½«´°¿ÚÉèÎª¿É¼û
+		//å°†çª—å£è®¾ä¸ºå¯è§
 		setVisible(true);
 	}
 	
@@ -90,13 +89,13 @@ public class BriupJFrame extends JFrame{
 		repaint();
 	}
 	/**
-	 * ×Ô¶¨ÒåµÄÒ»¸ö»­²¼Àà
+	 * è‡ªå®šä¹‰çš„ä¸€ä¸ªç”»å¸ƒç±»
 	 */
 	class BriupCanvas extends JPanel{
 		public BriupCanvas(Boolean b) {
 			super(b);
 		}
-		//ÔÚ»­²¼ÉÏÍê³É»­»­µÄ²Ù×÷,GraphicsÊÇ»­±Ê
+		//åœ¨ç”»å¸ƒä¸Šå®Œæˆç”»ç”»çš„æ“ä½œ,Graphicsæ˜¯ç”»ç¬”
 		@Override
 		protected void paintComponent(Graphics g) {
 //			g.drawOval(250, 250, 200, 100);
@@ -104,15 +103,15 @@ public class BriupJFrame extends JFrame{
 			
 //			Graphics2D g2d = (Graphics2D)g;
 //			g2d.setColor(Color.GREEN);
-//			//ÉèÖÃ±Ê»­µÄ´Ö¶È
+//			//è®¾ç½®ç¬”ç”»çš„ç²—åº¦
 //			g2d.setStroke(new BasicStroke(10));
 //			Ellipse2D ellipse2d = new Ellipse2D.Float(250.0f,250.0f ,100, 100);
-//			//¿ÕĞÄÔ²
+//			//ç©ºå¿ƒåœ†
 //			g2d.draw(ellipse2d);
 //			g2d.setColor(Color.RED);
 //			
 //			Ellipse2D ellipse2d2 = new Ellipse2D.Float(50.0f,50.0f ,100, 100);
-//			//ÊµĞÄÔ²
+//			//å®å¿ƒåœ†
 //			g2d.fill(ellipse2d2);
 			
 			Graphics2D g2d = (Graphics2D)g;

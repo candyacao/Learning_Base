@@ -1,7 +1,7 @@
 package com.candyacao.javademo.gui.mine;
 
 /**
- * Êı¾İ
+ * æ•°æ®
  * 
  * @author CLY
  *
@@ -15,24 +15,24 @@ public class MineSweeperData {
 	public static String numberImgUrl(int number) {
 
 		if (number < 0 || number > 8) {
-			throw new IllegalArgumentException("Êı×ÖÖ»ÄÜÊÇ0-8");
+			throw new IllegalArgumentException("æ•°å­—åªèƒ½æ˜¯0-8");
 		}
 		return "resources/" + number + ".png";
 	}
 
-	private int N;// ÓĞNĞĞ
-	private int M;// ÓĞMÁĞ
-	private int mineNumber;// ÓĞ¼¸¿ÅÀ×
+	private int N;// æœ‰Nè¡Œ
+	private int M;// æœ‰Måˆ—
+	private int mineNumber;// æœ‰å‡ é¢—é›·
 
 	private boolean[][] mines;
 
 	public MineSweeperData(int N, int M, int mineNumber) {
 
 		if (N < 0 || M < 0) {
-			throw new IllegalArgumentException("¸ñ×ÓÊı²»ÄÜĞ¡ÓÚ0");
+			throw new IllegalArgumentException("æ ¼å­æ•°ä¸èƒ½å°äº0");
 		}
 		if (mineNumber < 0 || mineNumber > N * M) {
-			throw new IllegalArgumentException("À×µÄÊıÁ¿²»ÄÜĞ¡ÓÚ0»òÕß´óÓÚ¸ñ×ÓµÄ×ÜÊı");
+			throw new IllegalArgumentException("é›·çš„æ•°é‡ä¸èƒ½å°äº0æˆ–è€…å¤§äºæ ¼å­çš„æ€»æ•°");
 		}
 		this.N = N;
 		this.M = M;
@@ -50,7 +50,7 @@ public class MineSweeperData {
 	}
 
 	/**
-	 * Ëæ»ú²¼À×µÄËã·¨
+	 * éšæœºå¸ƒé›·çš„ç®—æ³•
 	 */
 	public void randomMine(int mineNumber) {
 		
@@ -90,7 +90,7 @@ public class MineSweeperData {
 //
 //		}
 
-		// ËäÈ»Ö®Ç°µÄ×ö·¨ÒÑ¾­Âú×ãÁË²»ÉÙÀ×µÄĞèÇó£¬µ«ÊÇÒòÎªÓĞËÀÑ­»·£¬Ì«Ó°ÏìĞ§ÂÊ¡£
+		// è™½ç„¶ä¹‹å‰çš„åšæ³•å·²ç»æ»¡è¶³äº†ä¸å°‘é›·çš„éœ€æ±‚ï¼Œä½†æ˜¯å› ä¸ºæœ‰æ­»å¾ªç¯ï¼Œå¤ªå½±å“æ•ˆç‡ã€‚
 //		for (int i = 0; i < mineNumber; i++) {
 //			while (true) {
 //				int x = (int) (Math.random() * N);// [0,N)

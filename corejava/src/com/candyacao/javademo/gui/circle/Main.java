@@ -23,13 +23,13 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
-		//¸ø»­°åÌí¼Ó¼üÅÌµÄÏìÓ¦ÊÂ¼ş
+		//ç»™ç”»æ¿æ·»åŠ é”®ç›˜çš„å“åº”äº‹ä»¶
 		briupJFrame = new BriupJFrame("hello",CANVAS_WIDTH,CANVAS_HEIGHT);
 		MykeyListener mykeyListener = new MykeyListener();
 		briupJFrame.addKeyListener(mykeyListener);
 		briupJFrame.addMouseListener(new MyMouseListener());
 		for(int i = 0;i<CIRCLE_COUNT;i++) {
-			//Ô²ĞÄ×ø±êµÄËæ»ú·¶Î§Ó¦¸ÃÊÇ[r-------->w-r]
+			//åœ†å¿ƒåæ ‡çš„éšæœºèŒƒå›´åº”è¯¥æ˜¯[r-------->w-r]
 			
 			int x = (int)(Math.random()*(CANVAS_WIDTH-2*CIRCLE_R)+CIRCLE_R);
 			int y = (int)(Math.random()*(CANVAS_HEIGHT-2*CIRCLE_R)+CIRCLE_R);
@@ -65,7 +65,7 @@ public class Main {
 	}
 	
 	/**
-	 * ´´½¨Ò»¸ö²»ÄÜËæ»ú³ö0µÄ·½·¨
+	 * åˆ›å»ºä¸€ä¸ªä¸èƒ½éšæœºå‡º0çš„æ–¹æ³•
 	 * @return
 	 */
 	public static int randomSpeed() {

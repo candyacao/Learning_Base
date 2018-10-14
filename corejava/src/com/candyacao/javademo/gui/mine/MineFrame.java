@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- * É¨À×ÓÎÏ·µÄÊÓÍ¼
+ * æ‰«é›·æ¸¸æˆçš„è§†å›¾
  * 
  * @author CLY
  *
@@ -41,7 +41,7 @@ public class MineFrame extends JFrame {
 	}
 
 	/**
-	 * ¶Ô´°¿ÚµÄ³õÊ¼»¯´úÂë
+	 * å¯¹çª—å£çš„åˆå§‹åŒ–ä»£ç 
 	 * 
 	 * @param canvasWidth
 	 * @param canvasHeight
@@ -57,20 +57,20 @@ public class MineFrame extends JFrame {
 	}
 
 	/**
-	 * »­°åÀïÃæµÄ»­Ö½
+	 * ç”»æ¿é‡Œé¢çš„ç”»çº¸
 	 * 
 	 * @author yuxiangrousigaifan
 	 *
 	 */
 	class BriupCanvas extends JPanel {
 
-		// ¿ªÆôÁËË«»º³å
+		// å¼€å¯äº†åŒç¼“å†²
 		public BriupCanvas(boolean b) {
 			super(b);
 		}
 
 		/**
-		 * »æÖÆÍ¼ĞÎµÄ·½·¨
+		 * ç»˜åˆ¶å›¾å½¢çš„æ–¹æ³•
 		 */
 		@Override
 		protected void paintComponent(Graphics g) {
@@ -79,9 +79,7 @@ public class MineFrame extends JFrame {
 			
 			int w=canvasWidth/data.getN();
 			int h=canvasHeight/data.getM();
-         /**
-          * ÂñÀ×
-          */
+
 			for(int i=0;i<data.getN();i++) {
 				for(int j=0;j<data.getM();j++) {
 					if(data.mine(i, j)) {

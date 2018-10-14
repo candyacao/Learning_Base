@@ -1,24 +1,24 @@
 package com.candyacao.javademo.string;
 
 /**
- * 10000´Î×Ö·û´®µÄÆ´½Ó
+ * 10000æ¬¡æ‹¼æŽ¥å­—ç¬¦ä¸²çš„é€Ÿåº¦
  * @author CLY
  *
  */
 public class StringDemo {
 	public static void main(String[] args) {
-		//ÆÕÍ¨Æ´½Ó
+		//å®šä¹‰ä¸€ä¸ªç©ºå­—ç¬¦ä¸²
 		String s="";
-		//¿ªÊ¼Ê±¼ä
+		//èŽ·å¾—å¼€å§‹æ—¶é—´
 		long StartTime = System.currentTimeMillis();
 		for(int i=0;i<10000;i++) {
 			s +=i;
 		}
-		//½áÊøÊ±¼ä
+		//ç»“æŸæ—¶é—´
 		long endTime = System.currentTimeMillis();
 		System.out.println(endTime-StartTime);
 		
-		//StringBuffer   Ïß³Ì°²È« 
+		//StringBuffer   å¼€å§‹æ—¶é—´
 		long StartTime1 = System.currentTimeMillis();
 		StringBuffer s1 =new  StringBuffer();
 		for(int i=0;i<10000;i++) {
@@ -26,7 +26,7 @@ public class StringDemo {
 		}
 		long endTime1 = System.currentTimeMillis();
 		System.out.println(endTime1-StartTime1);
-		//StringBuilder  Ïß³Ì²»°²È«   Ð§ÂÊ¸ü¸ß
+		//StringBuilder  å¼€å§‹æ—¶é—´
 		long StartTime2 = System.currentTimeMillis();
 		StringBuilder s2 =new  StringBuilder();
 		for(int i=0;i<10000;i++) {
@@ -34,7 +34,7 @@ public class StringDemo {
 		}
 		long endTime2 = System.currentTimeMillis();
 		System.out.println(endTime2-StartTime2);
-		//Ð§ÂÊ£ºÆÕÍ¨Æ´½Ó < StringBuffer  <StringBuilder 
+		//String < StringBuffer  <StringBuilder 
 		System.out.println("Hello" instanceof String);
 	}
 

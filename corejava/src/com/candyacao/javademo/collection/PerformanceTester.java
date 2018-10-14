@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Vector;
 
-import com.briup.day09.Test;
-
 public class PerformanceTester {
 	private static final int TIMES = 100000;
 	
@@ -26,7 +24,7 @@ public class PerformanceTester {
 	}
 	
 	static Tester iterateTester = new Tester("iterate") {
-		//Ö´ĞĞµü´ú²Ù×÷µÄÄäÃûÀà
+		// æ‰§è¡Œè¿­ä»£æ“ä½œçš„åŒ¿åç±»
 		@Override
 		public void test(List<String> list) {
 			for(int i=0;i<10;i++) {
@@ -39,7 +37,7 @@ public class PerformanceTester {
 	};
 	
 	static Tester getTester = new Tester("get") {
-//Ö´ĞĞËæ»ú·ÃÎÊ²Ù×÷µÄÄäÃûÀà
+		//æ‰§è¡Œéšæœºè®¿é—®æ“ä½œçš„åŒ¿åç±»
 		@Override
 		public void test(List<String> list) {
 			for(int i=0;i<list.size();i++) {
@@ -53,10 +51,10 @@ public class PerformanceTester {
 	};
 	
 	static Tester insertTester = new Tester("insert") {
-		//Ö´ĞĞ²åÈë²Ù×÷µÄÄäÃûÀà
+		// æ‰§è¡Œæ’å…¥æ“ä½œçš„åŒ¿åç±»
 		@Override
 		public void test(List<String> list) {
-			ListIterator<String> it = list.listIterator(list.size()/2);   //´ÓÁĞ±íµÄÖĞ¼äÎ»ÖÃ¿ªÊ¼
+			ListIterator<String> it = list.listIterator(list.size()/2);   //ä»åˆ—è¡¨ä¸­é—´å¼€å§‹
 			for(int i=0;i<TIMES/2;i++)
 				it.add("hello");
 			
@@ -64,7 +62,7 @@ public class PerformanceTester {
 	};
 	
 	static Tester removeTester = new Tester("remove") {
-		//Ö´ĞĞÉ¾³ı²Ù×÷µÄÄäÃûÀà
+		//Ö´ æ‰§è¡Œåˆ é™¤æ“ä½œçš„åŒ¿åç±»
 		@Override
 		public void test(List<String> list) {
 			ListIterator<String> it = list.listIterator();
@@ -87,7 +85,7 @@ public class PerformanceTester {
 	
 	static public void test(Tester[] testers,List<String>list) {
 		for(int i=0;i<testers.length;i++) {
-			System.out.print(testers[i].getOperation()+"²Ù×÷£º");
+			System.out.print(testers[i].getOperation()+"æ“ä½œï¼š");
 			long t1 = System.currentTimeMillis();
 			testers[i].test(list);
 			long t2 = System.currentTimeMillis();
@@ -98,9 +96,8 @@ public class PerformanceTester {
 	
 	public static void main(String[] args) {
 		List<String> list = null;
-		
-		//²âÊÔÊı×é
-		System.out.println("---------------²âÊÔÊı×é------------");
+		// æµ‹è¯•Javaæ•°ç»„
+		System.out.println("-----æµ‹è¯•Javaæ•°ç»„-------");
 		String[] ss = new String[TIMES];
 		Arrays.fill(ss, "hello");
 		list = Arrays.asList(ss);
@@ -109,20 +106,20 @@ public class PerformanceTester {
 		ss = new String[TIMES/2];
 		Collection<String> col = Arrays.asList(ss);
 		
-		//²âÊÔVector
-		System.out.println("------²âÊÔVector----------");
+		//æµ‹è¯•Vector
+		System.out.println("------æµ‹è¯•Vector----------");
 		list = new Vector<String>();
 		list.addAll(col);
 		testList(list);
 		
-		//²âÊÔLinkedList
-		System.out.println("--------²âÊÔLinkedList----------");
+		//æµ‹è¯•LinkedList
+		System.out.println("--------æµ‹è¯•LinkedList----------");
 		list = new LinkedList<String>();
 		list.addAll(col);
 		testList(list);
 		
-		//²âÊÔArrayList
-		System.out.println("-----------²âÊÔArray List------------");
+		//æµ‹è¯•ArrayList
+		System.out.println("-----------æµ‹è¯•Array List------------");
 		list = new ArrayList<String>();
 		list.addAll(col);
 		testList(list);

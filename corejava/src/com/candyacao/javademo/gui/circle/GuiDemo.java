@@ -7,13 +7,13 @@ import javax.swing.JFrame;
 public class GuiDemo {
 	public static void main(String[] args) {
 		JFrame jFrame = new JFrame();
-		//ÉèÖÃ´óĞ¡
+		//è®¾ç½®å¤§å°
 		jFrame.setSize(new Dimension(500, 500));
-		//´°¿ÚµÄ´óĞ¡²»ÄÜËæÒâ¸Ä±ä
+		//çª—å£çš„å¤§å°ä¸èƒ½éšæ„æ”¹å˜
 		jFrame.setResizable(false);
-		//ÉèÖÃ´°¿ÚµÄ¹Ø±ÕÄ£Ê½£¬¼´ÔÙ¹Ø±Õ´°¿ÚµÄÊ±ºòÍË³ö³ÌĞò
+		//è®¾ç½®çª—å£çš„å…³é—­æ¨¡å¼ï¼Œå³å†å…³é—­çª—å£çš„æ—¶å€™é€€å‡ºç¨‹åº
 		jFrame.setDefaultCloseOperation(jFrame.EXIT_ON_CLOSE);
-		//½«´°¿ÚÉèÎª¿É¼û
+		//å°†çª—å£è®¾ä¸ºå¯è§
 		jFrame.setVisible(true);
 	}
 

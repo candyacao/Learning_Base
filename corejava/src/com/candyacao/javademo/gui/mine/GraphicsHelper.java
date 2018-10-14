@@ -9,15 +9,19 @@ import java.awt.geom.Ellipse2D;
 
 import javax.swing.ImageIcon;
 
+/**
+ * ç”»ç¬”çš„å·¥å…·ç±»
+ * 
+ * @author CLY
+ *
+ */
 public class GraphicsHelper {
-	/**
-	 * ¹¹ÔìÆ÷
-	 */
+
 	private GraphicsHelper() {
 	}
 
 	/**
-	 * ÉèÖÃ»­±ÊµÄÑÕÉ«
+	 * è®¾ç½®ç”»ç¬”çš„é¢œè‰²
 	 * 
 	 * @param g2d
 	 * @param color
@@ -27,7 +31,7 @@ public class GraphicsHelper {
 	}
 
 	/**
-	 * ÉèÖÃ»­±ÊµÄ´Ö¶È
+	 * è®¾ç½®ç”»ç¬”çš„ç²—åº¦
 	 * 
 	 * @param g2d
 	 * @param width
@@ -38,12 +42,12 @@ public class GraphicsHelper {
 	}
 
 	/**
-	 * »­Ò»¸ö¿ÕĞÄµÄÔ°
+	 * ç”»ä¸€ä¸ªç©ºå¿ƒçš„å›­
 	 * 
-	 * @param g2d »­±Ê
-	 * @param x   Ô²ĞÄµÄºá×ø±ê
-	 * @param y   Ô²ĞÄµÄ×İ×ø±ê
-	 * @param r   Ô²µÄ°ë¾¶
+	 * @param g2d ç”»ç¬”
+	 * @param x   åœ†å¿ƒçš„æ¨ªåæ ‡
+	 * @param y   åœ†å¿ƒçš„çºµåæ ‡
+	 * @param r   åœ†çš„åŠå¾„
 	 */
 	public static void strokeCircle(Graphics2D g2d, int x, int y, int r) {
 
@@ -52,13 +56,6 @@ public class GraphicsHelper {
 
 	}
 
-	/**
-	 * »­Ò»¸öÊµĞÄµÄÔ²
-	 * @param g2d     »­±Ê
-	 * @param x        Ô²ĞÄxµÄ×ø±ê
-	 * @param y        Ô²ĞÄyµÄ×ø±ê
-	 * @param r         Ô²µÄ°ë¾¶
-	 */
 	public static void fillCircle(Graphics2D g2d, int x, int y, int r) {
 
 		Ellipse2D e2d = new Ellipse2D.Float(x - r, y - r, 2 * r, 2 * r);
@@ -66,13 +63,6 @@ public class GraphicsHelper {
 
 	}
 	
-	/**
-	 * ÌùÍ¼Æ¬
-	 * @param g2d      »­±Ê
-	 * @param img    Í¼Æ¬Î»ÖÃĞÅÏ¢
-	 * @param x         ÒªÌùÍ¼Æ¬Î»ÖÃµÄx×ø±ê
-	 * @param y         ÒªÌùÍ¼Æ¬Î»ÖÃµÄy×ø±ê
-	 */
 	public static void drawImage(Graphics2D g2d,String img,int x,int y) {
 		ImageIcon icon = new ImageIcon(img);
 		Image image = icon.getImage();
@@ -80,24 +70,17 @@ public class GraphicsHelper {
 
 	}
 
-	/**
-	 * ¿ªÆôË«»º´æ
-	 * @param g2d       »­±Ê
-	 */
 	public static void openAA(Graphics2D g2d) {
 		RenderingHints hints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.addRenderingHints(hints);
 
 	}
 	
-	/**
-	 * ÉèÖÃÍ£¶ÙÊ±¼ä
-	 * @param time
-	 */
 	public static void sleep(long time) {
 		try {
 			Thread.sleep(time);
 		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
