@@ -1,2 +1,2 @@
-# JavaLearning_Base
-这是一个关于Java基础学习的笔记及代码
+# Learning_Base
+关于Java开发过程中，学习的笔记及代码
